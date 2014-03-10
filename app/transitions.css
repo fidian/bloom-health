@@ -1,22 +1,20 @@
+.animation(@spec) {
+    -webkit-animation: @spec;
+    -moz-animation: @spec;
+    animation: @spec;
+}
+
 .spin-4s {
-    -webkit-animation: spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+    .animation(spin 4s linear infinite);
 }
 .spin-4-2s {
-    -webkit-animation: spin 4.2s linear infinite;
-    -moz-animation:spin 4.2s linear infinite;
-    animation:spin 4.2s linear infinite;
+    .animation(spin 4.2s linear infinite);
 }
 .spin-4-4s {
-    -webkit-animation: spin 4.4s linear infinite;
-    -moz-animation:spin 4.4s linear infinite;
-    animation:spin 4.4s linear infinite;
+    .animation(spin 4.4s linear infinite);
 }
 .spin-4-6s {
-    -webkit-animation: spin 4.6s linear infinite;
-    -moz-animation:spin 4.6s linear infinite;
-    animation:spin 4.6s linear infinite;
+    .animation(spin 4.6s linear infinite);
 }
 
 @-moz-keyframes spin { 
