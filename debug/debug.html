@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="app">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="utf-8"><meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Bloom Health Coding Problem</title>
+        <!--SCRIPTS-->
+        <script src="components/angular/angular.js"></script>
+        <script src="app/app-module.js"></script>
+        <script src="app/app-controller.js"></script>
+        <script src=".build/ngtemplates/app-templates.js"></script>
+        <!--SCRIPTS END-->
+        <!--STYLES-->
+        <link rel="stylesheet" href=".build/less/app-styles/app/atomic.css" />
+        <link rel="stylesheet" href=".build/less/app-styles/app/reset.css" />
+        <link rel="stylesheet" href=".build/less/app-styles/app/transitions.css" />
+        <link rel="stylesheet" href=".build/less/app-styles/app/utility.css" />
+        <!--STYLES END-->
+    </head>
+    <!--[if IE 8]> <body class="ie8"> <![endif]-->
+    <!--[if IE 9]> <body class="ie9"> <![endif]-->
+    <!--[if gt IE 9]><!--> <body> <!--<![endif]-->
+        <div ng-controller="AppController" ng-include="template"></div>
+    </body>
+</html>
