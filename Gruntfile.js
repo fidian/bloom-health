@@ -6,6 +6,9 @@ module.exports = function (grunt) {
     files = {
         // 3rd party modules that are required first
         appThirdParty: [
+            // Phrase structure rule grammar parser
+            "3rd_party/fid-psr/lib/fid-psr.js",
+
             // The whole UI needs angular defined first
             "components/angular/angular.js",
             "components/angular-local-storage/angular-local-storage.js"

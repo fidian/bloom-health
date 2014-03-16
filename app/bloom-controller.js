@@ -5,9 +5,10 @@ angular.module('app').controller('AppController', [
     function ($scope, localStorageService) {
         'use strict';
 
-        var lsWunderground;
+        var lsUserSettings, lsWunderground;
 
         lsWunderground = 'wundergroundKey';
+        lsUserSettings = 'userSettings';
         $scope.$on('setApiKey', function (event, newKey) {
             /*jslint unparam:true*/
 
@@ -21,12 +22,16 @@ angular.module('app').controller('AppController', [
         });
 
         $scope.apiKey = localStorageService.get(lsWunderground);
+        $scope.userSettings = localStorageService.get(lsUserSettings) || {};
         $scope.$watch('apiKey', function (apiKey) {
             if (apiKey) {
                 $scope.template = 'app/forecast.html';
             } else {
                 $scope.template = 'app/api-key.html';
             }
+        });
+        $scope.$watchCollection('userSettings', function (newSettings) {
+            localStorageService.set(lsUserSettings, newSettings);
         });
     }
 ]);

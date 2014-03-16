@@ -17,8 +17,9 @@ Installation
 1.  Make sure you already have [Node.js](http://nodejs.org).
 2.  Install the Grunt command line program:  `npm install -g grunt-cli`
 3.  Clone the repository.
-4.  In the repository, get packages:  `npm install`
-5.  Finish the setup with grunt:  `grunt setup`
+4.  Get the submodules:  `git submodule init; git submodule update`
+5.  In the repository, get packages:  `npm install`
+6.  Finish the setup with grunt:  `grunt setup`
 
 
 Building the App

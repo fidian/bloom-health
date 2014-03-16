@@ -1,8 +1,8 @@
 /*global angular*/
 angular.module('app').directive('forecast', [
-    'localStorageService',
     'forecastRetriever',
-    function (localStorageService, forecastRetriever) {
+    'forecastIsAcceptable',
+    function (forecastRetriever, forecastIsAcceptable) {
         return {
             link: function ($scope) {
                 function setTemplate(name) {
@@ -11,7 +11,7 @@ angular.module('app').directive('forecast', [
 
                 setTemplate('loading');
                 forecastRetriever($scope.apiKey).then(function (personalizedForecast) {
-                    $scope.forecast = personalizedForecast;
+                    $scope.forecast = forecastIsAcceptable(personalizedForecast, $scope.userSettings);
                     console.log(personalizedForecast);
                     setTemplate('good');
                 }, function (err) {
@@ -24,6 +24,12 @@ angular.module('app').directive('forecast', [
 
                     setTemplate('error');
                     $scope.error = err.toString();
+                });
+
+                $scope.$watchCollection('userSettings', function () {
+                    if ($scope.forecast) {
+                        $scope.forecast = forecastIsAcceptable($scope.forecast, $scope.userSettings);
+                    }
                 });
             },
             template: '<div ng-include="template"></div>'

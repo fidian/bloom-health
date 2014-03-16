@@ -1,3 +1,5 @@
-<div>
-    Good!
+<div class="forecast-directive">
+    <div ng-repeat="dayForecast in forecast" day-forecast="dayForecast" ng-class="{hot:dayForecast.resultCode=='too-hot',cold:dayForecast.resultCode=='too-cold',good:dayForecast.resultCode=='good-day'}">
+        [{{dayForecast.high.fahrenheit}}&deg;F] {{dayForecast.date.monthname}} {{dayForecast.date.day}} {{dayForecast.resultString}}
+    </div>
 </div>
