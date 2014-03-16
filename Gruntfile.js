@@ -7,7 +7,8 @@ module.exports = function (grunt) {
         // 3rd party modules that are required first
         appThirdParty: [
             // The whole UI needs angular defined first
-            "components/angular/angular.js"
+            "components/angular/angular.js",
+            "components/angular-local-storage/angular-local-storage.js"
         ],
 
         // Our modules (directives, services, controllers, etc)
