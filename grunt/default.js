@@ -2,8 +2,10 @@ module.exports = function (grunt) {
     "use strict";
 
     grunt.registerTask("default", [
-        // app.js
         "newer:jslint",
+        "bowerful",
+
+        // app.js
         "newer:ngtemplates",
         "newer:uglify",
         "newer:concat:app-js",
