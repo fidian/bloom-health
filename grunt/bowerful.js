@@ -4,8 +4,9 @@ module.exports = function (grunt) {
     grunt.config('bowerful', {
         dist: {
             packages: {
-                angular: "~1.2.14",
-                'angular-local-storage': "~0.0.1"
+                angular: "1.2.14",
+                'angular-local-storage': "~0.0.1",
+                'angular-mocks': "1.2.14"
             }
         }
     });

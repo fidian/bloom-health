@@ -18,8 +18,11 @@
         "grunt-contrib-uglify": "*",
         "grunt-contrib-watch": "*",
         "grunt-jslint": "*",
+        "grunt-karma": "*",
         "grunt-newer": "*",
         "grunt-sails-linker": "*",
+        "karma-jasmine": "*",
+        "karma-phantomjs-launcher": "*",
         "load-grunt-tasks": "*",
         "time-grunt": "*"
     },
