@@ -1,5 +1,5 @@
 /*global angular*/
-angular.module('app').controller('AppController', [
+angular.module('app').controller('BloomController', [
     '$scope',
     'localStorageService',
     function ($scope, localStorageService) {
