@@ -12,7 +12,6 @@ angular.module('app').directive('forecast', [
                 setTemplate('loading');
                 forecastRetriever($scope.apiKey).then(function (personalizedForecast) {
                     $scope.forecast = forecastIsAcceptable(personalizedForecast, $scope.userSettings);
-                    console.log(personalizedForecast);
                     setTemplate('good');
                 }, function (err) {
                     try {
