@@ -5,6 +5,7 @@ module.exports = function (grunt) {
         var result;
 
         result = {
+            autoWatchBatchDelay: 1000,
             browsers: [
                 'PhantomJS'
             ],
