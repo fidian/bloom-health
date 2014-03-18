@@ -1,7 +1,8 @@
 /*global angular*/
 angular.module('app').service('forecastRetriever', [
     '$http',
-    function ($http) {
+    '$q',
+    function ($http, $q) {
         return function (apiKey) {
             function getApi(path) {
                 // Caution - WUnderground's API does not use CORS
@@ -17,7 +18,7 @@ angular.module('app').service('forecastRetriever', [
                     } catch (ignore) {}
 
                     if (isError) {
-                        throw response;
+                        return $q.reject(response);
                     }
 
                     return response;
@@ -32,7 +33,7 @@ angular.module('app').service('forecastRetriever', [
                 } catch (ignore) {}
 
                 if (!locationUri) {
-                    throw new Error('Unable to determine location');
+                    return $q.reject(new Error('Unable to determine location'));
                 }
 
                 // We should have a location.  Now get the forecast.
