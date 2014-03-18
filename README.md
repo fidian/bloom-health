@@ -30,7 +30,7 @@ Just run `grunt` to fire off a build.  You can make the debug client with `grunt
 The files under `www/` are considered production-ready and are the minified versions of the templates and code.
 
 
-Licence
+License
 -------
 
-This app is licenced under a MIT licence with an additional non-advertising clause.  See [LICENSE.md](LICENSE.md) for further information.
+This app is licensed under a MIT license with an additional non-advertising clause.  See [LICENSE.md](LICENSE.md) for further information.
