@@ -23,6 +23,7 @@ module.exports = function (grunt) {
                 ]
             },
             plugins: [
+                'karma-coverage',
                 'karma-jasmine',
                 'karma-phantomjs-launcher'
             ],
@@ -42,6 +43,21 @@ module.exports = function (grunt) {
     }
 
     grunt.config('karma', {
+        coverage: config({
+            coverageReporter: {
+                dir: 'debug/coverage/',
+                type: 'html'
+            },
+            preprocessors: {
+                'app/**/!(*spec).js': [
+                    'coverage'
+                ]
+            },
+            reporters: [
+                'progress',
+                'coverage'
+            ]
+        }),
         unit: config(),
         watch: config({
             singleRun: false,

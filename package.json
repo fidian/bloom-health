@@ -21,6 +21,7 @@
         "grunt-karma": "*",
         "grunt-newer": "*",
         "grunt-sails-linker": "*",
+        "karma-coverage": "*",
         "karma-jasmine": "*",
         "karma-phantomjs-launcher": "*",
         "load-grunt-tasks": "*",

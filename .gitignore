@@ -26,6 +26,7 @@ nbproject/
 
 # Generated
 /components/
+/debug/coverage/
 /node_modules/
 
 # Specific to this project
