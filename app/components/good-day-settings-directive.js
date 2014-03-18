@@ -5,7 +5,11 @@ angular.module('app').directive('goodDaySettings', [
             link: function ($scope) {
                 var settings;
 
-                settings = $scope.goodDaySettings || {};
+                if (!$scope.goodDaySettings) {
+                    $scope.goodDaySettings = {};
+                }
+
+                settings = $scope.goodDaySettings;
 
                 if (settings.range === undefined) {
                     settings.range = 5;
