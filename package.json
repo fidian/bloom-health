@@ -21,10 +21,10 @@
         "grunt-karma": "*",
         "grunt-newer": "*",
         "grunt-sails-linker": "*",
+        "jit-grunt": "*",
         "karma-coverage": "*",
         "karma-jasmine": "*",
         "karma-phantomjs-launcher": "*",
-        "load-grunt-tasks": "*",
         "time-grunt": "*"
     },
     "scripts": {

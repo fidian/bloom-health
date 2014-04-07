@@ -42,7 +42,12 @@ module.exports = function (grunt) {
     };
 
     require('time-grunt')(grunt);
-    require('load-grunt-tasks')(grunt);
+    require('jit-grunt')(grunt, {
+        'newer-clean': 'grunt-newer',
+        ngtemplates: 'grunt-angular-templates'
+    });
+    // Must be manually loaded so it can get renamed later
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.initConfig({
         // Version of Angular.js, which is used for URLs, files, directories
         angularVersion: "1.2.14",
