@@ -1,6 +1,8 @@
 Bloom Health Programming Example
 ================================
 
+[![Build Status](https://secure.travis-ci.org/fidian/bloom-health.png)](http://travis-ci.org/fidian/bloom-health)
+
 The task is as follows:
 
 * Weather application.

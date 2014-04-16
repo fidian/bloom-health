@@ -1,7 +1,20 @@
+/*global process*/
 module.exports = function (grunt) {
     "use strict";
 
-    grunt.registerTask("test", [
-        "karma:unit"
-    ]);
+    var tasks;
+
+    if (process.env.TRAVIS) {
+        tasks = [
+            "bowerful",
+            "karma:sauce"
+        ];
+    } else {
+        tasks = [
+            "default",
+            "karma:unit"
+        ];
+    }
+
+    grunt.registerTask("test", tasks);
 };

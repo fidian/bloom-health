@@ -25,6 +25,7 @@
         "karma-coverage": "*",
         "karma-jasmine": "*",
         "karma-phantomjs-launcher": "*",
+        "karma-sauce-launcher": "*",
         "time-grunt": "*"
     },
     "scripts": {
