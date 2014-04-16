@@ -12,10 +12,12 @@ module.exports = function (grunt) {
             ],
             directives: {
                 predef: [
-                    'console',
                     'module',
                     'require'
                 ]
+            },
+            options: {
+                errorsOnly: true
             }
         }
     });
