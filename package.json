@@ -23,7 +23,7 @@
         "grunt-sails-linker": "*",
         "jit-grunt": "*",
         "karma-coverage": "*",
-        "karma-jasmine": "*",
+        "karma-jasmine": "~0.2",
         "karma-phantomjs-launcher": "*",
         "karma-sauce-launcher": "*",
         "time-grunt": "*"
