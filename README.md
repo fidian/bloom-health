@@ -1,6 +1,8 @@
 Bloom Health Programming Example
 ================================
 
+This was a project that answered a programming challenge at Bloom Health.  They were a pretty nice shop.  Since then the repository's goal is more of an example of how one can structure an Angular application, complete with various build steps and automated testing.
+
 [![Build Status](https://secure.travis-ci.org/fidian/bloom-health.png)](http://travis-ci.org/fidian/bloom-health)
 
 The task is as follows:
