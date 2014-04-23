@@ -55,7 +55,7 @@ module.exports = function (grunt) {
             reporters: [
                 'progress'
             ],
-            sauceConfig: {
+            sauceLabs: {
                 accessKey: process.env.SAUCE_ACCESS_KEY,
                 testName: 'bloom-health tests',
                 username: process.env.SAUCE_USERNAME
@@ -64,9 +64,9 @@ module.exports = function (grunt) {
         };
 
         if (process.env.TRAVIS) {
-            result.sauceConfig.build = 'Travis #' + process.env.TRAVIS_BUILD_NUMBER + ' (' + process.env.TRAVIS_BUILD_ID + ')';
-            result.sauceConfig.startConnect = false;
-            result.sauceConfig.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
+            result.sauceLabs.build = 'Travis #' + process.env.TRAVIS_BUILD_NUMBER + ' (' + process.env.TRAVIS_BUILD_ID + ')';
+            result.sauceLabs.startConnect = false;
+            result.sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
 
             // Remove this once websockets are supported by Sauce + Travis
             // See angularjs's karma.shared.conf
